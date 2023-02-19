@@ -34,8 +34,8 @@ namespace DocumentDistance
             //Console.WriteLine("\n" + text2 + "\n");
             //Console.WriteLine();
 
-            Dictionary<string, double> first_file_words = new Dictionary<string, double>();
-            Dictionary<string, double> second_file_words = new Dictionary<string, double>();
+            Dictionary<string, float> first_file_words = new Dictionary<string, float>();
+            Dictionary<string, float> second_file_words = new Dictionary<string, float>();
 
             HashSet<string> common = new HashSet<string>();
 
@@ -146,10 +146,7 @@ namespace DocumentDistance
 
             //Console.WriteLine("                                               num = " + num + " common = " + common.Count + " file1 = " + first_file_words.Count + " file2 = " + second_file_words.Count);
             //double resultInRadian =;
-
-            double result = (180 / Math.PI) * Math.Acos(D1_D2 / Math.Sqrt(lD1l2 * lD2l2));
-                         
-            return result;
+            return  (180 / Math.PI) * Math.Acos(D1_D2 / Math.Sqrt(lD1l2 * lD2l2));
         }
     }
 }
